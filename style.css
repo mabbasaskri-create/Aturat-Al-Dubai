@@ -38,14 +38,18 @@
 
 /* 2. RESET */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--black);color:var(--white);font-family:var(--font-body);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;width:100%;max-width:100vw}
+html,body{position:relative}
+section{overflow-x:hidden}
+.swiper{overflow:hidden}
 ::selection{background:var(--gold);color:var(--black)}
 ::-webkit-scrollbar{width:8px}
 ::-webkit-scrollbar-track{background:var(--dark-grey)}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--gold-dark),var(--gold),var(--gold-light));border-radius:4px}
 ::-webkit-scrollbar-thumb:hover{background:var(--gold-light)}
 img{max-width:100%;height:auto;display:block}
+img,video,embed,iframe{max-width:100%}
 a{text-decoration:none;color:inherit;transition:var(--transition-normal)}
 ul{list-style:none}
 button{cursor:pointer;border:none;outline:none;background:none;font-family:inherit}
@@ -138,7 +142,7 @@ input,textarea,select{font-family:inherit;outline:none}
 @media(min-width:992px){.top-bar{display:block}}
 
 /* 10. NAVBAR */
-.navbar{position:fixed;top:0;left:0;width:100%;padding:20px 0;z-index:1000;transition:all .4s var(--transition-spring)}
+.navbar{position:fixed;top:0;left:0;width:100%;padding:20px 0;z-index:1000;transition:all .4s var(--transition-spring);overflow:visible}
 .navbar.scrolled{background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);padding:12px 0;border-bottom:1px solid rgba(212,175,55,.12);box-shadow:0 4px 30px rgba(0,0,0,.3)}
 .navbar-inner,.nav-container{display:flex;align-items:center;justify-content:space-between;max-width:1300px;margin:0 auto;padding:0 20px}
 .navbar-inner{padding:0}
@@ -163,7 +167,7 @@ input,textarea,select{font-family:inherit;outline:none}
 .nav-link-dropdown>a i,.has-mega-menu>a i,.nav-mega>a i{font-size:.65rem;margin-left:4px;transition:transform .3s ease}
 .nav-link-dropdown:hover>a i,.has-mega-menu:hover>a i,.nav-mega:hover>a i{transform:rotate(180deg)}
 
-.mega-menu{position:absolute;top:calc(100% + 20px);left:50%;transform:translateX(-50%);background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid rgba(212,175,55,.15);border-radius:var(--border-radius);padding:30px;min-width:700px;opacity:0;visibility:hidden;transform:translateX(-50%) translateY(10px);transition:all .4s var(--transition-spring);pointer-events:none;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.mega-menu{position:absolute;top:calc(100% + 20px);left:50%;transform:translateX(-50%);background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid rgba(212,175,55,.15);border-radius:var(--border-radius);padding:30px;min-width:700px;max-width:90vw;opacity:0;visibility:hidden;transform:translateX(-50%) translateY(10px);transition:all .4s var(--transition-spring);pointer-events:none;box-shadow:0 20px 60px rgba(0,0,0,.4);overflow:hidden}
 .has-mega-menu:hover .mega-menu,.nav-mega:hover .mega-menu,.nav-link-dropdown:hover .mega-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:all}
 .mega-menu-content,.mega-menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .mega-menu-column,.mega-col h4{font-family:var(--font-heading);font-size:.85rem;color:var(--gold);margin-bottom:15px;letter-spacing:1px}
@@ -197,7 +201,7 @@ input,textarea,select{font-family:inherit;outline:none}
 
 /* 11. SEARCH OVERLAY */
 .search-toggle{cursor:pointer}
-.search-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(11,11,11,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:10001;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s var(--transition-spring)}
+.search-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(11,11,11,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:10001;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s var(--transition-spring);overflow:hidden}
 .search-overlay.active,.search-overlay.open{opacity:1;visibility:visible}
 .search-overlay-content,.search-container{max-width:600px;width:100%;padding:0 20px;position:relative}
 .search-form{display:flex;gap:10px;width:100%;max-width:600px;margin:0 auto}
@@ -239,7 +243,7 @@ input,textarea,select{font-family:inherit;outline:none}
 .hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;animation:kenBurns 20s ease-in-out infinite alternate}
 .hero-slide{position:relative;width:100%;height:100vh;min-height:600px;display:flex;align-items:center;overflow:hidden}
 .hero-swiper{width:100%;height:100%}
-.hero-swiper .swiper-slide{display:flex;align-items:center}
+.hero-swiper .swiper-slide{display:flex;align-items:center;overflow:hidden}
 @keyframes kenBurns{0%{transform:scale(1)}100%{transform:scale(1.1)}}
 .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(11,11,11,.85) 0%,rgba(11,11,11,.6) 50%,rgba(11,11,11,.4) 100%);z-index:2}
 .hero-content{position:relative;z-index:4;max-width:700px;padding:0 20px}
@@ -291,7 +295,7 @@ input,textarea,select{font-family:inherit;outline:none}
 .counter-label{font-size:.85rem;color:var(--light-grey);text-transform:uppercase;letter-spacing:1px;margin-top:5px}
 
 /* 17. FEATURED PRODUCTS */
-.featured-products{padding:100px 0;background:var(--black)}
+.featured-products{padding:100px 0;background:var(--black);overflow-x:hidden}
 .filter-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:40px;flex-wrap:wrap}
 .filter-tab{padding:10px 24px;background:var(--grey);color:var(--light-grey);border:none;border-radius:50px;font-size:.85rem;font-weight:500;cursor:pointer;transition:all .3s var(--transition-spring);font-family:var(--font-body)}
 .filter-tab:hover,.filter-tab.active{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);transform:translateY(-2px)}
@@ -467,7 +471,7 @@ input,textarea,select{font-family:inherit;outline:none}
 .gallery-page-hero{position:relative;height:50vh;min-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--black)}
 
 /* 23. LIGHTBOX */
-.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(11,11,11,.95);z-index:20000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s var(--transition-spring)}
+.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(11,11,11,.95);z-index:20000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s var(--transition-spring);overflow:hidden}
 .lightbox.active{opacity:1;visibility:visible}
 .lightbox-overlay{position:absolute;top:0;left:0;width:100%;height:100%}
 .lightbox-content{position:relative;max-width:85%;max-height:85vh;display:flex;flex-direction:column;align-items:center}
@@ -768,6 +772,9 @@ input,textarea,select{font-family:inherit;outline:none}
 .whatsapp-float::before{content:'';position:absolute;width:100%;height:100%;border-radius:50%;background:rgba(37,211,102,.4);animation:whatsappPulse 2s ease-in-out infinite}
 @keyframes whatsappPulse{0%{transform:scale(1);opacity:1}100%{transform:scale(1.4);opacity:0}}
 
+/* Ensure fixed elements don't cause overflow */
+.fixed-no-overflow{position:fixed;will-change:transform}
+
 /* 40. FOOTER CONTACT */
 .contact-item a{color:var(--light-grey);transition:var(--transition-normal)}
 .contact-item a:hover{color:var(--gold)}
@@ -1011,6 +1018,7 @@ input,textarea,select{font-family:inherit;outline:none}
     .about-img-badge{left:10px;bottom:14px;padding:10px 14px}
     .badge-number{font-size:1.4rem}
     .badge-text{font-size:.6rem}
+    .about-preview{overflow:hidden}
     .about-text{font-size:.82rem}
     .about-feature{gap:10px}
     .about-feature-icon{width:38px;height:38px;min-width:38px;font-size:1rem;border-radius:8px}
