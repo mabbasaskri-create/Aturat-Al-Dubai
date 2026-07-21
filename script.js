@@ -635,7 +635,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof Swiper !== 'undefined' && document.querySelector('.hero-swiper')) {
     new Swiper('.hero-swiper', {
       loop: true,
-      autoplay: { delay: 5000, disableOnInteraction: false },
+      autoplay: { delay: 2000, disableOnInteraction: false },
       pagination: { el: '.hero-pagination', clickable: true },
       effect: 'fade',
       fadeEffect: { crossFade: true }
