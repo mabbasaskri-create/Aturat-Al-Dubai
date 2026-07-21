@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Aturat Al Dubai</title>
+    <meta name="description" content="View product details at Aturat Al Dubai. Premium imported perfumes, attars, and oud collections.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-line"></div>
+            <div class="loader-logo">
+                <span class="loader-text">ATURAT</span>
+                <span class="loader-text-sub">AL DUBAI</span>
+            </div>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-main">ATURAT</span>
+                <span class="logo-sub">AL DUBAI</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="nav-link-dropdown">
+                    <a href="shop.html" class="nav-link">Shop <i class="fas fa-chevron-down"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-grid">
+                            <div class="mega-menu-column">
+                                <h4>Perfumes</h4>
+                                <ul>
+                                    <li><a href="shop.html?category=men">Men's Perfumes</a></li>
+                                    <li><a href="shop.html?category=women">Women's Perfumes</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Traditional</h4>
+                                <ul>
+                                    <li><a href="shop.html?category=attars">Arabic Attars</a></li>
+                                    <li><a href="shop.html?category=oud">Oud Collection</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-column">
+                                <h4>Collections</h4>
+                                <ul>
+                                    <li><a href="shop.html?category=gift">Gift Sets</a></li>
+                                    <li><a href="shop.html?category=luxury">Luxury Collection</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="reviews.html" class="nav-link">Reviews</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-icons">
+                <button class="nav-icon-btn" aria-label="Search" id="searchToggle">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="nav-icon-btn" id="openWishlist" aria-label="Wishlist">
+                    <i class="far fa-heart"></i>
+                    <span class="icon-badge" id="wishlistCount">0</span>
+                </button>
+                <button class="nav-icon-btn" id="openCart" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="icon-badge" id="cartCount">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-inner">
+                <a href="index.html" class="mobile-link">Home</a>
+                <a href="shop.html" class="mobile-link">Shop</a>
+                <div class="mobile-submenu">
+                    <a href="shop.html?category=men">Men's Perfumes</a>
+                    <a href="shop.html?category=women">Women's Perfumes</a>
+                    <a href="shop.html?category=attars">Arabic Attars</a>
+                    <a href="shop.html?category=oud">Oud Collection</a>
+                    <a href="shop.html?category=gift">Gift Sets</a>
+                    <a href="shop.html?category=luxury">Luxury Collection</a>
+                </div>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="reviews.html" class="mobile-link">Reviews</a>
+                <a href="gallery.html" class="mobile-link">Gallery</a>
+                <a href="contact.html" class="mobile-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb" data-aos="fade-up">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="shop.html">Shop</a>
+                <i class="fas fa-chevron-right"></i>
+                <span class="active" id="breadcrumbProduct">Product</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail" id="productDetail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <!-- Product Images -->
+                <div class="product-detail-images" data-aos="fade-right">
+                    <div class="product-main-image">
+                        <img id="productMainImage" src="" alt="Product">
+                        <div class="product-badge" id="productBadge"></div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail-info" data-aos="fade-left">
+                    <span class="product-detail-category" id="productCategory"></span>
+                    <h1 class="product-detail-title" id="productTitle"></h1>
+
+                    <div class="product-detail-rating">
+                        <div class="stars" id="productStars"></div>
+                        <span class="rating-count" id="productRatingCount"></span>
+                    </div>
+
+                    <div class="product-detail-price">
+                        <span class="current-price" id="productPrice"></span>
+                        <span class="old-price" id="productOldPrice"></span>
+                        <span class="discount-badge" id="productDiscount"></span>
+                    </div>
+
+                    <p class="product-detail-desc" id="productDesc"></p>
+
+                    <div class="product-detail-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-tag"></i>
+                            <span>Category: <strong id="productMetaCategory"></strong></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-box"></i>
+                            <span>Size: <strong id="productSize"></strong></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Longevity: <strong id="productLongevity"></strong></span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Availability: <strong>In Stock</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="product-detail-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" id="qtyMinus"><i class="fas fa-minus"></i></button>
+                            <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="10">
+                            <button class="qty-btn" id="qtyPlus"><i class="fas fa-plus"></i></button>
+                        </div>
+                        <button class="btn btn-gold btn-lg" id="addToCartBtn">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <button class="btn btn-outline" id="wishlistBtn">
+                            <i class="far fa-heart"></i> Add to Wishlist
+                        </button>
+                    </div>
+
+                    <div class="product-detail-guarantees">
+                        <div class="guarantee-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>100% Original</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Fast Delivery</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-undo"></i>
+                            <span>Easy Returns</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs" data-aos="fade-up">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="description">Description</button>
+                    <button class="tab-btn" data-tab="notes">Fragrance Notes</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+                </div>
+                <div class="tab-content active" id="tab-description">
+                    <p id="fullDescription"></p>
+                </div>
+                <div class="tab-content" id="tab-notes">
+                    <div class="notes-grid" id="notesGrid">
+                        <div class="note-card">
+                            <div class="note-icon"><i class="fas fa-leaf"></i></div>
+                            <h4>Top Notes</h4>
+                            <p id="topNotes"></p>
+                        </div>
+                        <div class="note-card">
+                            <div class="note-icon"><i class="fas fa-seedling"></i></div>
+                            <h4>Heart Notes</h4>
+                            <p id="heartNotes"></p>
+                        </div>
+                        <div class="note-card">
+                            <div class="note-icon"><i class="fas fa-tree"></i></div>
+                            <h4>Base Notes</h4>
+                            <p id="baseNotes"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-shipping">
+                    <div class="shipping-info">
+                        <h4><i class="fas fa-truck"></i> Delivery</h4>
+                        <p>We deliver across Pakistan. Standard delivery takes 2-4 business days. Free delivery on orders above PKR 5,000.</p>
+                        <h4><i class="fas fa-undo"></i> Returns</h4>
+                        <p>We offer a 7-day return policy for unopened products. If you're not satisfied with your purchase, contact us for a hassle-free return.</p>
+                        <h4><i class="fas fa-shield-alt"></i> Guarantee</h4>
+                        <p>All our products are 100% original and authentic. We guarantee the quality and longevity of every fragrance we sell.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products" data-aos="fade-up">
+                <div class="section-header">
+                    <h2 class="section-title">You May Also <span class="gold-text">Like</span></h2>
+                </div>
+                <div class="products-grid" id="relatedProducts"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-about">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-main">ATURAT</span>
+                            <span class="logo-sub">AL DUBAI</span>
+                        </a>
+                        <p>Your trusted destination for premium imported luxury perfumes, attars, and oud collections. Original products, affordable prices, and exceptional quality guaranteed.</p>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/aturataldubai/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="reviews.html">Reviews</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Categories</h4>
+                        <ul class="footer-links">
+                            <li><a href="shop.html?category=men">Men's Perfumes</a></li>
+                            <li><a href="shop.html?category=women">Women's Perfumes</a></li>
+                            <li><a href="shop.html?category=attars">Arabic Attars</a></li>
+                            <li><a href="shop.html?category=oud">Oud Collection</a></li>
+                            <li><a href="shop.html?category=gift">Gift Sets</a></li>
+                            <li><a href="shop.html?category=luxury">Luxury Collection</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Visit Us</h4>
+                        <div class="footer-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Shop No. 2, Main Al Madina Road, 11-12 Chowk, Abu Bakar Centre, Block 9 Sector B-1, Lahore 54770, Pakistan</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+923001234567">+92 300 123 4567</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Mon-Sat: 11AM - 10PM<br>Sun: 12PM - 8PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-inner">
+                    <p>&copy; 2025 Aturat Al Dubai. All Rights Reserved. | Premium Imported Fragrances</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-sidebar-close" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-sidebar-body" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <a href="shop.html" class="btn btn-gold">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="cart-total-price" id="cartTotal">PKR 0</span>
+            </div>
+            <button class="btn btn-gold btn-block">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-overlay" id="wishlistOverlay"></div>
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-sidebar-header">
+            <h3><i class="far fa-heart"></i> Wishlist</h3>
+            <button class="wishlist-sidebar-close" id="closeWishlist"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="wishlist-sidebar-body" id="wishlistItems">
+            <div class="wishlist-empty">
+                <i class="far fa-heart"></i>
+                <p>Your wishlist is empty</p>
+                <a href="shop.html" class="btn btn-gold">Browse Products</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-body">
+            <span class="toast-title">Success</span>
+            <span class="toast-message" id="toastMessage">Item added</span>
+        </div>
+        <button class="toast-close" id="toastClose"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchBar">
+        <div class="search-modal">
+            <form class="search-form" action="shop.html" method="GET">
+                <input type="text" name="q" placeholder="Search for perfumes, attars, oud...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    // Product Database
+    const products = [
+        {
+            id: 1, name: 'Royal Oud Noir', category: 'oud', badge: 'Premium', price: 'PKR 2,999', oldPrice: 'PKR 4,999',
+            image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&h=750&fit=crop',
+            rating: 5, reviews: 45, size: '100ml', longevity: '8-12 hours',
+            desc: 'Royal Oud Noir is a luxurious and intense oud-based fragrance that embodies the essence of Arabian royalty. Crafted with the finest Cambodian oud, this scent opens with rich smoky notes that gradually reveal deep woody undertones.',
+            fullDesc: 'Royal Oud Noir is a magnificent tribute to the ancient art of oud making. Sourced from the heart of Cambodia, this premium oud oil is blended with carefully selected ingredients to create a fragrance that is both powerful and refined. The opening is bold and smoky, evoking images of Arabian nights. As it settles, the heart reveals a complex blend of rose, saffron, and leather, while the base grounds everything in a warm embrace of sandalwood, amber, and musk. Perfect for special occasions and evening wear.',
+            topNotes: 'Bergamot, Black Pepper, Saffron',
+            heartNotes: 'Oud, Rose, Leather',
+            baseNotes: 'Sandalwood, Amber, Musk, Vetiver'
+        },
+        {
+            id: 2, name: 'Velvet Rose Elixir', category: 'women', badge: 'Bestseller', price: 'PKR 3,499', oldPrice: 'PKR 5,499',
+            image: 'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&h=750&fit=crop',
+            rating: 5, reviews: 38, size: '75ml', longevity: '10-14 hours',
+            desc: 'Velvet Rose Elixir is a captivating floral fragrance that wraps you in the velvety embrace of Bulgarian roses and exotic spices.',
+            fullDesc: 'Velvet Rose Elixir is a masterpiece of floral perfumery. It opens with a burst of fresh Turkish rose, instantly transporting you to a lush rose garden at dawn. The heart unfolds with layers of peony, raspberry, and pink pepper, creating a dynamic and feminine character. The base is a warm and sensual blend of oud, vanilla, and patchouli that lingers beautifully on the skin. This is the perfect signature scent for the modern woman who appreciates timeless elegance.',
+            topNotes: 'Turkish Rose, Pink Pepper, Lychee',
+            heartNotes: 'Peony, Raspberry, Jasmine',
+            baseNotes: 'Oud, Vanilla, Patchouli, Musk'
+        },
+        {
+            id: 3, name: 'Mystic Arabian Attar', category: 'attar', badge: 'New', price: 'PKR 1,999', oldPrice: 'PKR 3,499',
+            image: 'https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&h=750&fit=crop',
+            rating: 4.5, reviews: 29, size: '12ml', longevity: '12-24 hours',
+            desc: 'Mystic Arabian Attar is a traditional alcohol-free perfume oil that captures the authentic spirit of Arabian perfumery.',
+            fullDesc: 'Mystic Arabian Attar is a pure perfume oil that honors the centuries-old tradition of Arabian attar making. Distilled from the finest natural ingredients, this alcohol-free formulation provides an intimate and personal fragrance experience. The attar opens with a burst of citrus and spice, quickly giving way to a heart of exotic flowers and herbs. The base is rich with oud, musk, and amber, creating a scent that stays close to the skin and develops beautifully over hours. Perfect for daily wear and those who prefer a more subtle, personal scent.',
+            topNotes: 'Citrus, Cardamom, Cinnamon',
+            heartNotes: 'Jasmine, Saffron, Rose',
+            baseNotes: 'Oud, Musk, Amber, Sandalwood'
+        },
+        {
+            id: 4, name: 'Pure Oud Supreme', category: 'oud', badge: 'Premium', price: 'PKR 5,999', oldPrice: 'PKR 8,999',
+            image: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&h=750&fit=crop',
+            rating: 5, reviews: 52, size: '50ml', longevity: '16-24 hours',
+            desc: 'Pure Oud Supreme is our finest and most rare oud perfume, made from the highest quality aged Cambodian oud.',
+            fullDesc: 'Pure Oud Supreme represents the pinnacle of oud perfumery. Made from rare, aged Cambodian oud that has been carefully selected and blended by master perfumers, this fragrance is a true olfactory masterpiece. The opening is intense and complex, with layers of smoky, leathery, and animalic nuances. The heart reveals the full beauty of aged oud, complemented by precious rose and saffron. The base is deep and meditative, with a blend of sandalwood, ambergris, and natural musk. This is not just a perfume; it is an experience. Limited quantities available.',
+            topNotes: 'Saffron, Oud, Pink Pepper',
+            heartNotes: 'Aged Oud, Damask Rose, Leather',
+            baseNotes: 'Sandalwood, Ambergris, Natural Musk, Civet'
+        },
+        {
+            id: 5, name: 'Bleu Sauvage Intense', category: 'men', badge: 'Bestseller', price: 'PKR 3,299', oldPrice: 'PKR 5,299',
+            image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=750&fit=crop',
+            rating: 5, reviews: 41, size: '100ml', longevity: '10-14 hours',
+            desc: 'Bleu Sauvage Intense is a bold and masculine fragrance for the modern man who commands attention.',
+            fullDesc: 'Bleu Sauvage Intense is a powerfully masculine fragrance that combines freshness with depth. It opens with a blast of citrus and aquatic notes, creating an invigorating and energetic first impression. The heart introduces aromatic lavender and geranium, adding a sophisticated touch. The base is warm and woody, with vetiver, cedarwood, and a hint of dark chocolate that gives this fragrance its unique character. Ideal for the office, casual outings, or a night out. This is a versatile powerhouse that works in any season.',
+            topNotes: 'Grapefruit, Lemon, Sea Notes, Mint',
+            heartNotes: 'Lavender, Geranium, Basil, Sage',
+            baseNotes: 'Vetiver, Cedarwood, Amber, Dark Chocolate'
+        },
+        {
+            id: 6, name: 'Jasmine Noir Dream', category: 'women', badge: 'New', price: 'PKR 2,799', oldPrice: 'PKR 4,499',
+            image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&h=750&fit=crop',
+            rating: 4.5, reviews: 33, size: '75ml', longevity: '8-12 hours',
+            desc: 'Jasmine Noir Dream is a seductive and mysterious fragrance built around the intoxicating scent of night-blooming jasmine.',
+            fullDesc: 'Jasmine Noir Dream captures the magic of night-blooming jasmine in a bottle. This enchanting fragrance opens with dark plum and bergamot, creating a mysterious and inviting aura. The heart is a lush bouquet of jasmine sambac, tuberose, and ylang-ylang, creating an intoxicating floral experience. The base grounds the composition with warm vanilla, tonka bean, and a touch of smoky vetiver. This is the perfect evening fragrance for the woman who wants to leave a lasting impression.',
+            topNotes: 'Dark Plum, Bergamot, Black Currant',
+            heartNotes: 'Jasmine Sambac, Tuberose, Ylang-Ylang',
+            baseNotes: 'Vanilla, Tonka Bean, Vetiver, Cashmeran'
+        },
+        {
+            id: 7, name: 'Desert Rose Attar', category: 'attar', badge: 'Limited', price: 'PKR 1,499', oldPrice: 'PKR 2,999',
+            image: 'https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&h=750&fit=crop',
+            rating: 4.5, reviews: 26, size: '12ml', longevity: '10-18 hours',
+            desc: 'Desert Rose Attar is a pure rose attar that captures the delicate beauty of the Taif rose in a traditional oil format.',
+            fullDesc: 'Desert Rose Attar is a love letter to the legendary Taif rose of Saudi Arabia. Each drop of this precious attar is distilled from hand-picked roses at dawn, when their fragrance is at its most potent. The attar opens with a fresh, dewy rose scent that is both natural and intoxicating. As it develops, warm undertones of oud and sandalwood emerge, adding depth and complexity. The base is a soft blend of musk and amber that extends the rose\'s natural beauty. This traditional attar is perfect for those who appreciate the art of Arabian perfumery.',
+            topNotes: 'Taif Rose, Dewy Petals',
+            heartNotes: 'Rose Absolute, Oud, Saffron',
+            baseNotes: 'Sandalwood, Musk, Amber, Musk'
+        },
+        {
+            id: 8, name: 'Amber Oud Royale', category: 'luxury', badge: 'Premium', price: 'PKR 6,999', oldPrice: 'PKR 9,999',
+            image: 'https://images.unsplash.com/photo-1512909006721-3d6018887383?w=600&h=750&fit=crop',
+            rating: 5, reviews: 37, size: '75ml', longevity: '14-20 hours',
+            desc: 'Amber Oud Royale is an opulent and regal fragrance that combines the richness of amber with the depth of rare oud.',
+            fullDesc: 'Amber Oud Royale is the crown jewel of our collection. This opulent fragrance opens with a majestic blend of saffron and rose, instantly establishing its luxurious character. The heart is a magnificent fusion of aged oud, labdanum, and frankincense, creating a scent that is both ancient and modern. The base is an intoxicating blend of golden amber, benzoin, and a proprietary blend of rare ingredients that gives this fragrance its unique and unforgettable signature. This is a fragrance for those who settle for nothing but the best. Presented in an exquisite bottle with gold accents.',
+            topNotes: 'Saffron, Rose, Bergamot',
+            heartNotes: 'Aged Oud, Labdanum, Frankincense',
+            baseNotes: 'Golden Amber, Benzoin, Vanilla, Musk'
+        },
+        {
+            id: 9, name: 'Silver Musk', category: 'men', badge: 'New', price: 'PKR 2,499', oldPrice: 'PKR 3,999',
+            image: 'https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=600&h=750&fit=crop',
+            rating: 4.5, reviews: 22, size: '100ml', longevity: '8-12 hours',
+            desc: 'Silver Musk is a clean, sophisticated musk fragrance with a fresh and modern character.',
+            fullDesc: 'Silver Musk is a modern classic that redefines the traditional musk fragrance. Clean and sophisticated, it opens with sparkling bergamot and violet leaf, creating an immediate sense of freshness. The heart introduces white musk and iris, adding a powdery elegance. The base is smooth with cashmere wood and a hint of white amber, creating a scent that is both comfortable and refined. Perfect for daily wear, office environments, and year-round use.',
+            topNotes: 'Bergamot, Violet Leaf, Artemisia',
+            heartNotes: 'White Musk, Iris, Geranium',
+            baseNotes: 'Cashmere Wood, White Amber, Cedarwood'
+        },
+        {
+            id: 10, name: 'Midnight Oud', category: 'women', badge: 'Bestseller', price: 'PKR 3,799', oldPrice: 'PKR 5,799',
+            image: 'https://images.unsplash.com/photo-1512909006721-3d6018887383?w=600&h=750&fit=crop',
+            rating: 5, reviews: 44, size: '75ml', longevity: '12-16 hours',
+            desc: 'Midnight Oud is a seductive evening fragrance that combines the darkness of oud with feminine florals.',
+            fullDesc: 'Midnight Oud is designed for the woman who owns the night. This seductive fragrance opens with a mysterious blend of dark berries and black pepper, creating immediate intrigue. The heart is a beautiful contrast of velvety rose and intense oud, representing the duality of femininity and strength. The base is deep and sensual with patchouli, dark vanilla, and amber. This is the ultimate evening fragrance for special occasions, date nights, and any time you want to make a statement.',
+            topNotes: 'Dark Berries, Black Pepper, Mandarin',
+            heartNotes: 'Rose, Oud, Iris',
+            baseNotes: 'Patchouli, Dark Vanilla, Amber, Musk'
+        },
+        {
+            id: 11, name: 'Golden Amber Attar', category: 'attar', badge: 'Premium', price: 'PKR 2,299', oldPrice: 'PKR 3,999',
+            image: 'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&h=750&fit=crop',
+            rating: 5, reviews: 31, size: '12ml', longevity: '14-24 hours',
+            desc: 'Golden Amber Attar is a warm and resinous attar built around the rich sweetness of natural amber.',
+            fullDesc: 'Golden Amber Attar is a warm embrace in a bottle. This natural attar is crafted from real amber resin, creating an authentic and rich fragrance experience. It opens with warm, honeyed notes of amber that immediately create a cozy and inviting atmosphere. The heart adds complexity with rose, myrrh, and a touch of oud. The base is deep and lasting with sandalwood, musk, and benzoin. This attar is perfect for those who love warm, comforting fragrances and prefer the intimate nature of oil-based perfumery.',
+            topNotes: 'Amber Resin, Honey, Saffron',
+            heartNotes: 'Rose, Myrrh, Oud',
+            baseNotes: 'Sandalwood, Musk, Benzoin, Vanilla'
+        },
+        {
+            id: 12, name: 'Oud Imperial Gift Set', category: 'gift', badge: 'Limited', price: 'PKR 12,999', oldPrice: 'PKR 18,999',
+            image: 'https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=600&h=750&fit=crop',
+            rating: 5, reviews: 18, size: '3 x 30ml', longevity: 'Varies',
+            desc: 'The Oud Imperial Gift Set features three exclusive oud-based fragrances in an elegant gift box. The perfect luxury gift.',
+            fullDesc: 'The Oud Imperial Gift Set is our most luxurious offering, featuring three carefully curated oud-based fragrances in a stunning gift box. The set includes Royal Oud Noir (smoky and intense), Pure Oud Supreme (rare and aged), and Amber Oud Royale (warm and opulent). Each fragrance comes in a 30ml bottle, making this set perfect for sampling our finest oud collection or as an unforgettable gift for a loved one. The gift box features hand-crafted Arabic calligraphy and gold foil accents.',
+            topNotes: 'Three unique compositions',
+            heartNotes: 'Each features premium oud',
+            baseNotes: 'Rich base notes in each fragrance'
+        },
+        {
+            id: 13, name: 'Aqua Marine', category: 'men', badge: 'New', price: 'PKR 1,999', oldPrice: 'PKR 3,499',
+            image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=750&fit=crop',
+            rating: 4, reviews: 15, size: '100ml', longevity: '6-8 hours',
+            desc: 'Aqua Marine is a refreshing aquatic fragrance that captures the essence of ocean breezes and coastal adventures.',
+            fullDesc: 'Aqua Marine is your passport to the ocean. This invigorating fragrance opens with a splash of sea salt and citrus, instantly transporting you to a tropical paradise. The heart introduces aquatic notes and seaweed, creating a natural oceanic character. The base is clean with white cedar and driftwood, adding a touch of warmth. Perfect for summer days, beach outings, and casual wear.',
+            topNotes: 'Sea Salt, Lemon, Ozone',
+            heartNotes: 'Marine Notes, Seaweed, Iris',
+            baseNotes: 'White Cedar, Driftwood, Musk'
+        },
+        {
+            id: 14, name: 'Floral Symphony', category: 'women', badge: 'New', price: 'PKR 2,299', oldPrice: 'PKR 3,799',
+            image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&h=750&fit=crop',
+            rating: 4.5, reviews: 20, size: '75ml', longevity: '8-10 hours',
+            desc: 'Floral Symphony is a harmonious blend of the world\'s most beautiful flowers, creating a joyful and feminine scent.',
+            fullDesc: 'Floral Symphony is like walking through a blooming garden in spring. This joyful fragrance opens with a burst of peony and freesia, creating an immediate sense of happiness. The heart is a rich bouquet of rose, lily of the valley, and magnolia, adding depth and romance. The base is soft with white musk and blonde woods, creating a gentle and lasting finish. Perfect for daytime wear, spring and summer seasons.',
+            topNotes: 'Peony, Freesia, Green Tea',
+            heartNotes: 'Rose, Lily of the Valley, Magnolia',
+            baseNotes: 'White Musk, Blonde Woods, Orris'
+        },
+        {
+            id: 15, name: 'Royal Attar Collection', category: 'luxury', badge: 'Premium', price: 'PKR 8,999', oldPrice: 'PKR 14,999',
+            image: 'https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=600&h=750&fit=crop',
+            rating: 5, reviews: 12, size: '5 x 6ml', longevity: 'Varies',
+            desc: 'The Royal Attar Collection features five hand-crafted traditional attars in a luxurious presentation box.',
+            fullDesc: 'The Royal Attar Collection is a curated set of five traditional Arabian attars, each representing a different facet of Middle Eastern perfumery. The collection includes Mystic Arabian Attar, Desert Rose Attar, Golden Amber Attar, and two exclusive blends available only in this set. Each attar is hand-crafted using traditional distillation methods and presented in hand-blown glass bottles. The collection comes in a velvet-lined wooden box, making it the ultimate luxury gift.',
+            topNotes: 'Five unique attar compositions',
+            heartNotes: 'Traditional Arabian ingredients',
+            baseNotes: 'Pure oud and musk bases'
+        },
+        {
+            id: 16, name: 'Velvet Oud Rose', category: 'oud', badge: 'Bestseller', price: 'PKR 4,499', oldPrice: 'PKR 6,999',
+            image: 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&h=750&fit=crop',
+            rating: 5, reviews: 48, size: '75ml', longevity: '12-18 hours',
+            desc: 'Velvet Oud Rose is a harmonious blend of precious oud and Damask rose, creating an unforgettable oriental masterpiece.',
+            fullDesc: 'Velvet Oud Rose is a masterclass in oriental perfumery. This luxurious fragrance opens with a dazzling combination of saffron and cardamom, creating an immediate sense of opulence. The heart is where the magic happens: a perfect marriage of aged oud and Damask rose, two of perfumery\'s most precious ingredients. The base is rich and complex with amber, sandalwood, and a touch of leather. This is a fragrance that evolves beautifully throughout the day, revealing new facets at every stage.',
+            topNotes: 'Saffron, Cardamom, Pink Pepper',
+            heartNotes: 'Aged Oud, Damask Rose, Incense',
+            baseNotes: 'Amber, Sandalwood, Leather, Musk'
+        }
+    ];
+
+    // Get product ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get('id'), 10) || 1;
+
+    // Find product
+    const product = products.find(p => p.id === productId) || products[0];
+
+    // Populate product details
+    document.title = product.name + ' | Aturat Al Dubai';
+    document.getElementById('productMainImage').src = product.image;
+    document.getElementById('productMainImage').alt = product.name;
+    document.getElementById('productTitle').textContent = product.name;
+    document.getElementById('productCategory').textContent = product.category.charAt(0).toUpperCase() + product.category.slice(1);
+    document.getElementById('productPrice').textContent = product.price;
+    document.getElementById('productOldPrice').textContent = product.oldPrice;
+    document.getElementById('productDesc').textContent = product.desc;
+    document.getElementById('fullDescription').textContent = product.fullDesc;
+    document.getElementById('breadcrumbProduct').textContent = product.name;
+    document.getElementById('productSize').textContent = product.size;
+    document.getElementById('productLongevity').textContent = product.longevity;
+    document.getElementById('productMetaCategory').textContent = product.category.charAt(0).toUpperCase() + product.category.slice(1);
+    document.getElementById('topNotes').textContent = product.topNotes;
+    document.getElementById('heartNotes').textContent = product.heartNotes;
+    document.getElementById('baseNotes').textContent = product.baseNotes;
+
+    // Badge
+    const badge = document.getElementById('productBadge');
+    if (product.badge) {
+        badge.textContent = product.badge;
+        badge.style.display = '';
+    } else {
+        badge.style.display = 'none';
+    }
+
+    // Discount
+    const oldPriceNum = parseFloat(product.oldPrice.replace(/[^0-9.]/g, ''));
+    const priceNum = parseFloat(product.price.replace(/[^0-9.]/g, ''));
+    const discountEl = document.getElementById('productDiscount');
+    if (oldPriceNum > priceNum) {
+        const discount = Math.round((1 - priceNum / oldPriceNum) * 100);
+        discountEl.textContent = '-' + discount + '% OFF';
+    } else {
+        discountEl.style.display = 'none';
+    }
+
+    // Stars
+    const starsEl = document.getElementById('productStars');
+    const fullStars = Math.floor(product.rating);
+    const hasHalf = product.rating % 1 >= 0.5;
+    for (let i = 0; i < fullStars; i++) {
+        starsEl.innerHTML += '<i class="fas fa-star"></i>';
+    }
+    if (hasHalf) {
+        starsEl.innerHTML += '<i class="fas fa-star-half-alt"></i>';
+    }
+    for (let i = starsEl.children.length; i < 5; i++) {
+        starsEl.innerHTML += '<i class="far fa-star"></i>';
+    }
+    document.getElementById('productRatingCount').textContent = '(' + product.reviews + ' reviews)';
+
+    // Related products (same category, different product)
+    const relatedProducts = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
+    const relatedGrid = document.getElementById('relatedProducts');
+    relatedProducts.forEach(rp => {
+        relatedGrid.innerHTML += `
+            <div class="product-card" data-aos="fade-up">
+                <a href="product.html?id=${rp.id}" class="product-image-link">
+                    <div class="product-image">
+                        <img src="${rp.image}" alt="${rp.name}">
+                        <div class="product-badge ${rp.badge.toLowerCase()}">${rp.badge}</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <span class="product-category">${rp.category.charAt(0).toUpperCase() + rp.category.slice(1)}</span>
+                    <h4 class="product-name"><a href="product.html?id=${rp.id}">${rp.name}</a></h4>
+                    <div class="product-price">
+                        <span class="current-price">${rp.price}</span>
+                        <span class="old-price">${rp.oldPrice}</span>
+                    </div>
+                    <button class="btn btn-add-cart" data-id="${rp.id}" data-name="${rp.name}" data-price="${rp.price}"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                </div>
+            </div>
+        `;
+    });
+
+    // Quantity selector
+    const qtyInput = document.getElementById('qtyInput');
+    document.getElementById('qtyMinus').addEventListener('click', () => {
+        if (qtyInput.value > 1) qtyInput.value = parseInt(qtyInput.value) - 1;
+    });
+    document.getElementById('qtyPlus').addEventListener('click', () => {
+        if (qtyInput.value < 10) qtyInput.value = parseInt(qtyInput.value) + 1;
+    });
+
+    // Add to cart button
+    document.getElementById('addToCartBtn').addEventListener('click', () => {
+        const qty = parseInt(qtyInput.value, 10);
+        for (let i = 0; i < qty; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'btn-add-cart';
+            btn.setAttribute('data-id', product.id);
+            btn.setAttribute('data-name', product.name);
+            btn.setAttribute('data-price', product.price);
+            btn.click();
+        }
+    });
+
+    // Wishlist button
+    document.getElementById('wishlistBtn').addEventListener('click', () => {
+        const card = document.querySelector('.product-detail-info');
+        const wishlistBtn = document.querySelector('#wishlistBtn');
+        wishlistBtn.classList.toggle('active');
+        if (wishlistBtn.classList.contains('active')) {
+            wishlistBtn.innerHTML = '<i class="fas fa-heart"></i> Added to Wishlist';
+            if (typeof showToast === 'function') showToast('Added to wishlist');
+        } else {
+            wishlistBtn.innerHTML = '<i class="far fa-heart"></i> Add to Wishlist';
+            if (typeof showToast === 'function') showToast('Removed from wishlist');
+        }
+    });
+
+    // Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('tab-' + btn.getAttribute('data-tab')).classList.add('active');
+        });
+    });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

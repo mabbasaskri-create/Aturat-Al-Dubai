@@ -1,0 +1,951 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Aturat Al Dubai | Premium Luxury Perfumes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <i class="fas fa-gem"></i>
+            </div>
+            <div class="preloader-text">Aturat Al Dubai</div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-inner">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-phone-alt"></i> +92 300 1234567</span>
+                    <span><i class="fas fa-envelope"></i> info@aturataldubai.com</span>
+                </div>
+                <div class="top-bar-right">
+                    <span><i class="fas fa-truck"></i> Free Delivery on Orders Above PKR 5,000</span>
+                    <div class="top-bar-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="navbar-inner">
+                <div class="navbar-left">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon"><i class="fas fa-gem"></i></span>
+                        <div class="logo-text">
+                            <span class="logo-title">Aturat Al Dubai</span>
+                            <span class="logo-subtitle">Premium Perfumes</span>
+                        </div>
+                    </a>
+                </div>
+
+                <nav class="navbar-center">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="mega-menu-item active"><a href="shop.html" class="active">Shop <i class="fas fa-chevron-down"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-col">
+                                    <h4>By Category</h4>
+                                    <ul>
+                                        <li><a href="shop.html">All Perfumes</a></li>
+                                        <li><a href="shop.html">Men's Collection</a></li>
+                                        <li><a href="shop.html">Women's Collection</a></li>
+                                        <li><a href="shop.html">Attars</a></li>
+                                        <li><a href="shop.html">Oud Collection</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-col">
+                                    <h4>Special</h4>
+                                    <ul>
+                                        <li><a href="shop.html">Gift Sets</a></li>
+                                        <li><a href="shop.html">Luxury Edition</a></li>
+                                        <li><a href="shop.html">New Arrivals</a></li>
+                                        <li><a href="shop.html">Bestsellers</a></li>
+                                        <li><a href="shop.html">Sale</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-menu-col mega-menu-featured">
+                                    <h4>Featured</h4>
+                                    <div class="mega-menu-featured-item">
+                                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=200&h=250&fit=crop" alt="Featured Perfume">
+                                        <div>
+                                            <span class="mega-menu-featured-tag">Best Seller</span>
+                                            <span class="mega-menu-featured-name">Royal Oud Noir</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="navbar-right">
+                    <button class="navbar-btn" id="searchToggle" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="navbar-btn" id="openWishlist" aria-label="Wishlist">
+                        <i class="far fa-heart"></i>
+                        <span class="badge" id="wishlistCount">0</span>
+                    </button>
+                    <button class="navbar-btn" id="openCart" aria-label="Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge" id="cartCount">0</span>
+                    </button>
+                    <button class="navbar-btn hamburger" id="hamburger" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchBar">
+            <div class="container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for perfumes, attars, gift sets..." class="search-input">
+                    <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+                    <button type="button" class="search-close search-close-btn"><i class="fas fa-times"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-gem"></i></span>
+                <div class="logo-text">
+                    <span class="logo-title">Aturat Al Dubai</span>
+                    <span class="logo-subtitle">Premium Perfumes</span>
+                </div>
+            </a>
+            <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Page Hero Banner -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=1920&h=400&fit=crop" alt="Shop Banner">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <h1 class="page-hero-title">Our Collection</h1>
+                <p class="page-hero-subtitle">Premium Imported Fragrances</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-sep">/</span>
+                    <span class="breadcrumb-current">Shop</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="shop-filter-bar" data-aos="fade-up">
+                <div class="shop-filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="men">Men</button>
+                    <button class="filter-tab" data-filter="women">Women</button>
+                    <button class="filter-tab" data-filter="attar">Attars</button>
+                    <button class="filter-tab" data-filter="oud">Oud</button>
+                    <button class="filter-tab" data-filter="gift-set">Gift Sets</button>
+                    <button class="filter-tab" data-filter="luxury">Luxury</button>
+                </div>
+                <div class="shop-filter-search">
+                    <div class="shop-search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="productSearchInput" placeholder="Search products..." class="shop-search-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+
+                <!-- Product 1 -->
+                <div class="product-card" data-category="men" data-aos="fade-up" data-aos-delay="0">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=1" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=500&fit=crop" alt="Royal Oud Noir">
+                                <div class="product-badge badge-hot">Hot</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Men</span>
+                            <h3 class="product-name"><a href="product.html?id=1">Royal Oud Noir</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(128)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 2,999</span>
+                                <span class="old-price">PKR 4,500</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="1" data-name="Royal Oud Noir" data-price="2999"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="women" data-aos="fade-up" data-aos-delay="50">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=2" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=400&h=500&fit=crop" alt="Velvet Rose Elixir">
+                                <div class="product-badge badge-bestseller">Bestseller</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Women</span>
+                            <h3 class="product-name"><a href="product.html?id=2">Velvet Rose Elixir</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">(96)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 3,499</span>
+                                <span class="old-price">PKR 5,200</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="2" data-name="Velvet Rose Elixir" data-price="3499"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="attar" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=3" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&h=500&fit=crop" alt="Mystic Arabian Attar">
+                                <div class="product-badge badge-new">New</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Attar</span>
+                            <h3 class="product-name"><a href="product.html?id=3">Mystic Arabian Attar</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(74)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 1,999</span>
+                                <span class="old-price">PKR 3,000</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="3" data-name="Mystic Arabian Attar" data-price="1999"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="oud" data-aos="fade-up" data-aos-delay="150">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=4" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=500&fit=crop" alt="Pure Oud Supreme">
+                                <div class="product-badge badge-premium">Premium</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Oud</span>
+                            <h3 class="product-name"><a href="product.html?id=4">Pure Oud Supreme</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(152)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 5,999</span>
+                                <span class="old-price">PKR 8,500</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="4" data-name="Pure Oud Supreme" data-price="5999"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="men" data-aos="fade-up" data-aos-delay="0">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=5" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=500&fit=crop" alt="Bleu Sauvage Intense">
+                                <div class="product-badge badge-sale">Sale</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Men</span>
+                            <h3 class="product-name"><a href="product.html?id=5">Bleu Sauvage Intense</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">(87)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 3,299</span>
+                                <span class="old-price">PKR 4,800</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="5" data-name="Bleu Sauvage Intense" data-price="3299"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="women" data-aos="fade-up" data-aos-delay="50">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=6" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400&h=500&fit=crop" alt="Jasmine Noir Dream">
+                                <div class="product-badge badge-new">New</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Women</span>
+                            <h3 class="product-name"><a href="product.html?id=6">Jasmine Noir Dream</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(63)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 2,799</span>
+                                <span class="old-price">PKR 4,200</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="6" data-name="Jasmine Noir Dream" data-price="2799"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="attar" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=7" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=500&fit=crop" alt="Desert Rose Attar">
+                                <div class="product-badge badge-bestseller">Bestseller</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Attar</span>
+                            <h3 class="product-name"><a href="product.html?id=7">Desert Rose Attar</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="rating-count">(45)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 1,499</span>
+                                <span class="old-price">PKR 2,500</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="7" data-name="Desert Rose Attar" data-price="1499"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="oud" data-aos="fade-up" data-aos-delay="150">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=8" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?w=400&h=500&fit=crop" alt="Amber Oud Royale">
+                                <div class="product-badge badge-limited">Limited</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Oud</span>
+                            <h3 class="product-name"><a href="product.html?id=8">Amber Oud Royale</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(210)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 6,999</span>
+                                <span class="old-price">PKR 9,999</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="8" data-name="Amber Oud Royale" data-price="6999"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-category="men" data-aos="fade-up" data-aos-delay="0">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=9" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=500&fit=crop" alt="Silver Musk">
+                                <div class="product-badge badge-hot">Hot</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Men</span>
+                            <h3 class="product-name"><a href="product.html?id=9">Silver Musk</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">(109)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 2,499</span>
+                                <span class="old-price">PKR 3,800</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="9" data-name="Silver Musk" data-price="2499"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card" data-category="women" data-aos="fade-up" data-aos-delay="50">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=10" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=500&fit=crop" alt="Midnight Oud">
+                                <div class="product-badge badge-premium">Premium</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Women</span>
+                            <h3 class="product-name"><a href="product.html?id=10">Midnight Oud</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(141)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 3,799</span>
+                                <span class="old-price">PKR 6,000</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="10" data-name="Midnight Oud" data-price="3799"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card" data-category="attar" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=11" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w=400&h=500&fit=crop" alt="Golden Amber Attar">
+                                <div class="product-badge badge-new">New</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Attar</span>
+                            <h3 class="product-name"><a href="product.html?id=11">Golden Amber Attar</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="rating-count">(58)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 2,299</span>
+                                <span class="old-price">PKR 2,800</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="11" data-name="Golden Amber Attar" data-price="2299"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card" data-category="oud" data-aos="fade-up" data-aos-delay="150">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=12" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=400&h=500&fit=crop" alt="Oud Imperial Gift Set">
+                                <div class="product-badge badge-limited">Limited</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Oud</span>
+                            <h3 class="product-name"><a href="product.html?id=12">Oud Imperial Gift Set</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(183)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 12,999</span>
+                                <span class="old-price">PKR 10,500</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="12" data-name="Oud Imperial Gift Set" data-price="12999"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card" data-category="men" data-aos="fade-up" data-aos-delay="0">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=13" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=500&fit=crop" alt="Aqua Marine">
+                                <div class="product-badge badge-sale">Sale</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Men</span>
+                            <h3 class="product-name"><a href="product.html?id=13">Aqua Marine</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">(72)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 1,999</span>
+                                <span class="old-price">PKR 4,300</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="13" data-name="Aqua Marine" data-price="1999"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card" data-category="women" data-aos="fade-up" data-aos-delay="50">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=14" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=400&h=500&fit=crop" alt="Floral Symphony">
+                                <div class="product-badge badge-bestseller">Bestseller</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Women</span>
+                            <h3 class="product-name"><a href="product.html?id=14">Floral Symphony</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(115)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 2,299</span>
+                                <span class="old-price">PKR 5,500</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="14" data-name="Floral Symphony" data-price="2299"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card" data-category="gift-set" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=15" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w=400&h=500&fit=crop" alt="Royal Attar Collection">
+                                <div class="product-badge badge-premium">Premium</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Gift Set</span>
+                            <h3 class="product-name"><a href="product.html?id=15">Royal Attar Collection</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(88)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 8,999</span>
+                                <span class="old-price">PKR 8,000</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="15" data-name="Royal Attar Collection" data-price="8999"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card" data-category="gift-set" data-aos="fade-up" data-aos-delay="150">
+                    <div class="product-card-inner">
+                        <a href="product.html?id=16" class="product-image-link">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=500&fit=crop" alt="Velvet Oud Rose">
+                                <div class="product-badge badge-limited">Limited</div>
+                                <div class="product-overlay">
+                                    <button class="product-overlay-btn" title="Quick View"><i class="fas fa-eye"></i></button>
+                                    <button class="product-overlay-btn" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                                    <button class="product-overlay-btn" title="Compare"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="product-info">
+                            <span class="product-category">Gift Set</span>
+                            <h3 class="product-name"><a href="product.html?id=16">Velvet Oud Rose</a></h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-count">(67)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">PKR 4,499</span>
+                                <span class="old-price">PKR 12,000</span>
+                            </div>
+                            <button class="btn btn-add-cart" data-id="16" data-name="Velvet Oud Rose" data-price="4499"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" data-aos="fade-up">
+                <button class="pagination-btn pagination-prev" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <span class="pagination-dots">...</span>
+                <button class="pagination-btn">8</button>
+                <button class="pagination-btn pagination-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-about" data-aos="fade-up">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon"><i class="fas fa-gem"></i></span>
+                            <div class="logo-text">
+                                <span class="logo-title">Aturat Al Dubai</span>
+                                <span class="logo-subtitle">Premium Perfumes</span>
+                            </div>
+                        </a>
+                        <p class="footer-about-text">We bring you the finest selection of premium imported perfumes, attars, and oud from around the world. Experience luxury fragrances that leave a lasting impression.</p>
+                        <div class="footer-social">
+                            <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="footer-col-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="reviews.html">Reviews</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="footer-col-title">Categories</h4>
+                        <ul class="footer-links">
+                            <li><a href="shop.html">Men's Perfumes</a></li>
+                            <li><a href="shop.html">Women's Perfumes</a></li>
+                            <li><a href="shop.html">Attars</a></li>
+                            <li><a href="shop.html">Oud Collection</a></li>
+                            <li><a href="shop.html">Gift Sets</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-contact" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="footer-col-title">Contact Us</h4>
+                        <ul class="footer-contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> Main Boulevard, Gulberg III, Lahore, Pakistan</li>
+                            <li><i class="fas fa-phone-alt"></i> +92 300 1234567</li>
+                            <li><i class="fas fa-envelope"></i> info@aturataldubai.com</li>
+                            <li><i class="fas fa-clock"></i> Mon - Sat: 10:00 AM - 10:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-inner">
+                    <p class="footer-copyright">&copy; 2026 Aturat Al Dubai. All Rights Reserved.</p>
+                    <div class="footer-payments">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-stripe"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-sidebar-close" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-sidebar-body" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <a href="shop.html" class="btn btn-gold">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="cart-total-price" id="cartTotal">PKR 0</span>
+            </div>
+            <button class="btn btn-gold btn-block">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-overlay" id="wishlistOverlay"></div>
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-sidebar-header">
+            <h3><i class="far fa-heart"></i> Wishlist</h3>
+            <button class="wishlist-sidebar-close" id="closeWishlist"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="wishlist-sidebar-body" id="wishlistItems">
+            <div class="wishlist-empty">
+                <i class="far fa-heart"></i>
+                <p>Your wishlist is empty</p>
+                <a href="shop.html" class="btn btn-gold">Browse Products</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-body">
+            <span class="toast-title">Success</span>
+            <span class="toast-message" id="toastMessage">Item added</span>
+        </div>
+        <button class="toast-close" id="toastClose"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+            <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-image-wrapper">
+                <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

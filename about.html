@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Aturat Al Dubai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-gem"></i></span>
+                <span class="logo-text">Aturat Al Dubai</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-mega">
+                    <a href="shop.html" class="nav-link">Shop <i class="fas fa-chevron-down"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-col">
+                            <h4>For Him</h4>
+                            <ul>
+                                <li><a href="shop.html?cat=men-oud">Oud Perfumes</a></li>
+                                <li><a href="shop.html?cat=men-attar">Attars</a></li>
+                                <li><a href="shop.html?cat=men-woody">Woody Fragrances</a></li>
+                                <li><a href="shop.html?cat=men-aquatic">Aquatic Scents</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-col">
+                            <h4>For Her</h4>
+                            <ul>
+                                <li><a href="shop.html?cat=women-floral">Floral Perfumes</a></li>
+                                <li><a href="shop.html?cat=women-oriental">Oriental Scents</a></li>
+                                <li><a href="shop.html?cat=women-fruity">Fruity Fragrances</a></li>
+                                <li><a href="shop.html?cat=women-attar">Attars</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Unisex</h4>
+                            <ul>
+                                <li><a href="shop.html?cat=unisex-oud">Oud Collection</a></li>
+                                <li><a href="shop.html?cat=unisex-attar">Attar Collection</a></li>
+                                <li><a href="shop.html?cat=unisex-set">Gift Sets</a></li>
+                                <li><a href="shop.html?cat=unisex-best">Best Sellers</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-col">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="shop.html?cat=new">New Arrivals</a></li>
+                                <li><a href="shop.html?cat=best">Best Sellers</a></li>
+                                <li><a href="shop.html?cat=sale">On Sale</a></li>
+                                <li><a href="shop.html?cat=gift">Gift Sets</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="nav-icon-btn" id="searchToggle" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="nav-icon-btn" id="openWishlist" aria-label="Wishlist"><i class="far fa-heart"></i><span class="badge" id="wishlistCount">0</span></button>
+                <button class="nav-icon-btn" id="openCart" aria-label="Cart"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></button>
+                <button class="hamburger" id="hamburger" aria-label="Menu" style="display:none"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchBar">
+        <div class="search-container">
+            <form class="search-form">
+                <input type="text" placeholder="Search for perfumes, attars, oud..." id="searchInput">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- Page Hero Banner -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=1920&h=400&fit=crop" alt="About Us Hero">
+            <div class="page-hero-overlay"></div>
+        </div>
+        <div class="page-hero-content" data-aos="fade-up" data-aos-duration="800">
+            <h1 class="page-hero-title">About Us</h1>
+            <p class="page-hero-subtitle">The Story of Aturat Al Dubai</p>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span><i class="fas fa-chevron-right"></i></span>
+                <span class="active">About Us</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story-section" id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image" data-aos="fade-right" data-aos-duration="800">
+                    <div class="story-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=750&fit=crop" alt="Aturat Al Dubai Store">
+                        <div class="experience-badge">
+                            <span class="exp-number">5+</span>
+                            <span class="exp-text">Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-content" data-aos="fade-left" data-aos-duration="800">
+                    <span class="section-subtitle">Our Story</span>
+                    <h2 class="section-title">The Art of Luxury Fragrance</h2>
+                    <p class="story-text">
+                        Aturat Al Dubai was founded with a singular vision — to bring the finest collection of premium imported perfumes, Arabic attars, and oud to the heart of Lahore, Pakistan. What began as a small passion project in the bustling lanes of Al Madina Road has blossomed into one of the most trusted names in luxury fragrances. Our journey started with a deep love for the art of perfumery and a desire to make authentic, world-class scents accessible to every fragrance enthusiast in Pakistan.
+                    </p>
+                    <p class="story-text">
+                        Over the past five years, we have proudly served thousands of satisfied customers who trust us for original, long-lasting perfumes at affordable prices. Our carefully curated collection features handpicked fragrances from the world's most renowned perfume houses, along with traditional Arabic attars and rare oud that transport you to the mystique of the Middle East. Whether you are looking for a bold statement scent for special occasions or a subtle everyday fragrance, Aturat Al Dubai has something to match every personality and mood — all while keeping your budget in mind.
+                    </p>
+                    <div class="story-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Authentic Products</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium Quality Guaranteed</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free Delivery in Lahore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Row -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>100% Original</h3>
+                    <p>Certified authentic products sourced directly from authorized distributors and international brands.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Long Lasting</h3>
+                    <p>Premium quality fragrances with exceptional longevity that stays with you from morning to night.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Affordable Prices</h3>
+                    <p>Luxury does not have to break the bank. We offer the best value on premium fragrances in Pakistan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-card" data-aos="fade-right" data-aos-duration="800">
+                    <div class="mission-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=500&h=400&fit=crop" alt="Our Mission">
+                    </div>
+                    <div class="mission-content">
+                        <span class="section-subtitle">What Drives Us</span>
+                        <h3 class="mission-title">Our Mission</h3>
+                        <p>To bring the world's finest fragrances to Pakistan at prices everyone can enjoy. We believe that luxury perfumery should be accessible to all, not just a privileged few. Through careful curation, direct sourcing, and a deep understanding of our customers' needs, we are committed to delivering an unmatched fragrance experience right to your doorstep.</p>
+                        <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
+                    </div>
+                </div>
+                <div class="mission-card" data-aos="fade-left" data-aos-duration="800">
+                    <div class="mission-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=500&h=400&fit=crop" alt="Our Vision">
+                    </div>
+                    <div class="mission-content">
+                        <span class="section-subtitle">Where We Are Going</span>
+                        <h3 class="mission-title">Our Vision</h3>
+                        <p>To become Pakistan's most trusted and beloved fragrance destination. We envision a future where every person in Pakistan can access authentic, premium-quality perfumes and attars without compromise. Through innovation, customer-centric service, and unwavering commitment to quality, we aim to redefine the fragrance shopping experience across the nation.</p>
+                        <div class="mission-icon"><i class="fas fa-eye"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Animated Counters Section -->
+    <section class="counters-section">
+        <div class="counters-overlay"></div>
+        <div class="container">
+            <div class="counters-grid">
+                <div class="counter-item" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="counter-icon"><i class="fas fa-star"></i></div>
+                    <div class="counter-number" data-target="72">0</div>
+                    <span class="counter-plus">+</span>
+                    <div class="counter-label">Happy Reviews</div>
+                </div>
+                <div class="counter-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="counter-icon"><i class="fas fa-smile"></i></div>
+                    <div class="counter-number" data-target="1000">0</div>
+                    <span class="counter-plus">+</span>
+                    <div class="counter-label">Satisfied Customers</div>
+                </div>
+                <div class="counter-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="counter-icon"><i class="fas fa-wine-bottle"></i></div>
+                    <div class="counter-number" data-target="200">0</div>
+                    <span class="counter-plus">+</span>
+                    <div class="counter-label">Premium Products</div>
+                </div>
+                <div class="counter-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="counter-icon"><i class="fas fa-star-half-stroke"></i></div>
+                    <div class="counter-number" data-target="5">0</div>
+                    <span class="counter-plus"></span>
+                    <div class="counter-label">Star Google Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What We Stand For</span>
+                <h2 class="section-title">Our Core Values</h2>
+                <p class="section-desc">The principles that guide everything we do at Aturat Al Dubai</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Quality First</h3>
+                    <p>Every product in our collection is handpicked and rigorously tested to ensure it meets the highest standards of quality and craftsmanship.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Customer Trust</h3>
+                    <p>Trust is the foundation of our business. We earn it every day through transparent practices, honest descriptions, and reliable service.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Authentic Products</h3>
+                    <p>We guarantee that every perfume, attar, and oud we sell is 100% original and sourced from authorized distributors worldwide.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Affordable Luxury</h3>
+                    <p>Luxury fragrances should not be a luxury to buy. We work hard to bring you premium scents at prices that do not strain your wallet.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Expert Guidance</h3>
+                    <p>Our knowledgeable team is always ready to help you find the perfect scent, whether you are a fragrance connoisseur or a first-time buyer.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Community Love</h3>
+                    <p>We are deeply rooted in our community and proud to serve the people of Lahore. Your love and support fuel our passion every single day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in" data-aos-duration="800">
+                <span class="cta-subtitle">Begin Your Journey</span>
+                <h2 class="cta-title">Ready to Find Your Signature Scent?</h2>
+                <p class="cta-text">Explore our curated collection of premium perfumes, Arabic attars, and oud. Let us help you discover a fragrance that speaks to your soul.</p>
+                <div class="cta-buttons">
+                    <a href="shop.html" class="btn btn-primary">
+                        <i class="fas fa-shopping-bag"></i> Shop Now
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-about">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon"><i class="fas fa-gem"></i></span>
+                            <span class="logo-text">Aturat Al Dubai</span>
+                        </a>
+                        <p>Premium imported perfumes, Arabic attars, and oud in Lahore, Pakistan. Original fragrances at affordable prices for men and women.</p>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/aturataldubai/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="reviews.html">Reviews</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="shop.html?cat=men-oud">Men Oud Perfumes</a></li>
+                            <li><a href="shop.html?cat=women-floral">Women Floral</a></li>
+                            <li><a href="shop.html?cat=unisex-attar">Unisex Attars</a></li>
+                            <li><a href="shop.html?cat=new">New Arrivals</a></li>
+                            <li><a href="shop.html?cat=best">Best Sellers</a></li>
+                            <li><a href="shop.html?cat=sale">On Sale</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-contact">
+                        <h4>Visit Us</h4>
+                        <div class="footer-info">
+                            <div class="footer-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Shop No. 2, Main Al Madina Road, 11-12 Chowk, Abu Bakar Centre, Block 9 Sector B-1, Lahore 54770, Pakistan</span>
+                            </div>
+                            <div class="footer-info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:+923001234567">+92 300 123 4567</a>
+                            </div>
+                            <div class="footer-info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon-Sat: 11AM - 10PM | Sun: 12PM - 8PM</span>
+                            </div>
+                        </div>
+                        <div class="footer-newsletter">
+                            <h4>Newsletter</h4>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Aturat Al Dubai. All rights reserved. | Premium Fragrances in Lahore, Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-sidebar-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="cart-sidebar-close" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-sidebar-body" id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+                <a href="shop.html" class="btn btn-gold">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="cart-total-price" id="cartTotal">PKR 0</span>
+            </div>
+            <button class="btn btn-gold btn-block">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-overlay" id="wishlistOverlay"></div>
+    <div class="wishlist-sidebar" id="wishlistSidebar">
+        <div class="wishlist-sidebar-header">
+            <h3><i class="far fa-heart"></i> Wishlist</h3>
+            <button class="wishlist-sidebar-close" id="closeWishlist"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="wishlist-sidebar-body" id="wishlistItems">
+            <div class="wishlist-empty">
+                <i class="far fa-heart"></i>
+                <p>Your wishlist is empty</p>
+                <a href="shop.html" class="btn btn-gold">Browse Products</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-body">
+            <span class="toast-title">Success</span>
+            <span class="toast-message" id="toastMessage">Item added</span>
+        </div>
+        <button class="toast-close" id="toastClose"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                updateCounter();
+            });
+        }
+
+        // Intersection Observer for counters
+        const countersSection = document.querySelector('.counters-section');
+        if (countersSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            observer.observe(countersSection);
+        }
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

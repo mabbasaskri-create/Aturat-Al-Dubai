@@ -1,0 +1,836 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews | Aturat Al Dubai - Premium Luxury Perfumes in Lahore</title>
+  <meta name="description" content="Read authentic customer reviews for Aturat Al Dubai. Rated #1 perfume shop in Lahore. See what our customers say about our luxury perfumes, attars, and oud collection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">атурат</div>
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#x2726;</span>
+        <div class="logo-text">
+          <span class="logo-main">Aturat Al Dubai</span>
+          <span class="logo-sub">Premium Luxury Perfumes</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="has-mega-menu">
+            <a href="shop.html" class="nav-link">Shop <i class="fas fa-chevron-down"></i></a>
+            <div class="mega-menu">
+              <div class="mega-menu-content">
+                <div class="mega-col">
+                  <h4>Men's Perfumes</h4>
+                  <ul>
+                    <li><a href="shop.html">Oud Collection</a></li>
+                    <li><a href="shop.html">Fresh & Aquatic</a></li>
+                    <li><a href="shop.html">Woody & Spicy</a></li>
+                    <li><a href="shop.html">Leather & Smoky</a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Women's Perfumes</h4>
+                  <ul>
+                    <li><a href="shop.html">Floral Collection</a></li>
+                    <li><a href="shop.html">Oriental & Sweet</a></li>
+                    <li><a href="shop.html">Fresh & Citrus</a></li>
+                    <li><a href="shop.html">Rose Collection</a></li>
+                  </ul>
+                </div>
+                <div class="mega-col">
+                  <h4>Attars & Oud</h4>
+                  <ul>
+                    <li><a href="shop.html">Pure Attars</a></li>
+                    <li><a href="shop.html">Pure Oud Oil</a></li>
+                    <li><a href="shop.html">Bakhoor</a></li>
+                    <li><a href="shop.html">Gift Sets</a></li>
+                  </ul>
+                </div>
+                <div class="mega-col mega-feature">
+                  <div class="mega-feature-img">
+                    <i class="fas fa-gift mega-feature-icon"></i>
+                  </div>
+                  <h4>New Arrivals</h4>
+                  <p>Check out our latest additions to the collection</p>
+                  <a href="shop.html" class="mega-btn">Explore Now</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn search-toggle" id="searchToggle" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="nav-icon-btn wishlist-toggle" id="openWishlist" aria-label="Wishlist">
+          <i class="fas fa-heart"></i>
+          <span class="badge" id="wishlistCount">0</span>
+        </button>
+        <button class="nav-icon-btn cart-toggle" id="openCart" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+        <button class="nav-icon-btn hamburger" id="hamburger" aria-label="Menu" style="display:none">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchBar">
+      <div class="search-overlay-content">
+        <form class="search-form" onsubmit="return false;">
+          <input type="text" placeholder="Search for perfumes, attars, oud..." class="search-input" id="searchInput">
+          <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
+        </form>
+        <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner -->
+  <section class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=1920&h=400&fit=crop');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content" data-aos="fade-up" data-aos-duration="800">
+      <h1 class="page-hero-title">Customer Reviews</h1>
+      <p class="page-hero-subtitle">What Our Customers Say</p>
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Reviews</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Google Rating Summary -->
+  <section class="rating-summary-section" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <div class="rating-summary-card">
+        <div class="rating-summary-left">
+          <div class="rating-big-number">5.0</div>
+          <div class="rating-big-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="rating-count">Based on <strong>72 Google Reviews</strong></p>
+        </div>
+        <div class="rating-summary-divider"></div>
+        <div class="rating-summary-right">
+          <div class="rating-badge">
+            <i class="fas fa-trophy"></i>
+            <span>Rated #1 Perfume Shop in Lahore</span>
+          </div>
+          <div class="rating-bars">
+            <div class="rating-bar-row">
+              <span class="bar-label">5 Star</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 94%;"></div></div>
+              <span class="bar-count">68</span>
+            </div>
+            <div class="rating-bar-row">
+              <span class="bar-label">4 Star</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 6%;"></div></div>
+              <span class="bar-count">4</span>
+            </div>
+            <div class="rating-bar-row">
+              <span class="bar-label">3 Star</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 0%;"></div></div>
+              <span class="bar-count">0</span>
+            </div>
+            <div class="rating-bar-row">
+              <span class="bar-label">2 Star</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 0%;"></div></div>
+              <span class="bar-count">0</span>
+            </div>
+            <div class="rating-bar-row">
+              <span class="bar-label">1 Star</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 0%;"></div></div>
+              <span class="bar-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Filter Tabs -->
+  <section class="reviews-filter-section">
+    <div class="container">
+      <div class="reviews-filter-tabs" data-aos="fade-up" data-aos-duration="600">
+        <button class="filter-tab active" data-filter="all">All Reviews</button>
+        <button class="filter-tab" data-filter="5star">5 Star</button>
+        <button class="filter-tab" data-filter="mens">Men's Perfumes</button>
+        <button class="filter-tab" data-filter="womens">Women's Perfumes</button>
+        <button class="filter-tab" data-filter="attar">Attars & Oud</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Grid -->
+  <section class="reviews-grid-section">
+    <div class="container">
+      <div class="reviews-grid" id="reviewsGrid">
+
+        <!-- Review 1 -->
+        <div class="review-card" data-category="mens" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Men's Perfume</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Absolutely love the perfumes here! The oud collection is incredible and lasts all day. Best perfume shop in Lahore!"</p>
+          <div class="review-author">
+            <div class="review-avatar">AH</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Ahmed Hassan</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card" data-category="attar" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Attar</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"The best collection of Arabic attars I've found in Lahore. Authentic products and very affordable prices. Highly recommended!"</p>
+          <div class="review-author">
+            <div class="review-avatar">FK</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Fatima Khan</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card" data-category="mens" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Gift Set</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Bought a gift set for my wife and she absolutely loved it! The packaging was premium and the scent is divine. 10/10!"</p>
+          <div class="review-author">
+            <div class="review-avatar">MR</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Muhammad Rizwan</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card" data-category="womens" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Women's Perfume</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Amazing quality and great customer service. They helped me find exactly what I was looking for. Will definitely shop again!"</p>
+          <div class="review-author">
+            <div class="review-avatar">SA</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Sara Ali</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card" data-category="mens" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Men's Perfume</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"I've been buying from Aturat Al Dubai for over a year now. Consistent quality and the prices are unbeatable in the market."</p>
+          <div class="review-author">
+            <div class="review-avatar">UQ</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Usman Qureshi</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-card" data-category="attar" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Oud</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"The pure oud collection is something else entirely. Rich, authentic, and long-lasting. A true gem of a store in Lahore!"</p>
+          <div class="review-author">
+            <div class="review-avatar">ZI</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Zain Ibrahim</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 7 -->
+        <div class="review-card" data-category="womens" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Women's Perfume</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Love the variety they have! From western fragrances to traditional attars, everything is top quality. My go-to perfume shop."</p>
+          <div class="review-author">
+            <div class="review-avatar">AM</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Ayesha Malik</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 8 -->
+        <div class="review-card" data-category="mens" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Men's Perfume</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Quick delivery and excellent packaging. The Bleu Sauvage Intense is now my everyday signature scent. Highly recommend!"</p>
+          <div class="review-author">
+            <div class="review-avatar">HA</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Hassan Ali</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 9 -->
+        <div class="review-card" data-category="attar" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Attar</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Bought the Desert Rose Attar as a gift for my mother. She was so happy! The scent is beautiful and lasts incredibly long."</p>
+          <div class="review-author">
+            <div class="review-avatar">MB</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Maryam Bibi</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 10 -->
+        <div class="review-card" data-category="mens" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Men's Perfume</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Very professional staff with deep knowledge of fragrances. They recommended the perfect scent for my wedding. Thank you!"</p>
+          <div class="review-author">
+            <div class="review-avatar">BA</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Bilal Ahmad</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 11 -->
+        <div class="review-card" data-category="womens" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Women's Perfume</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"The Velvet Rose Elixir is absolutely divine! I get compliments every time I wear it. Best women's perfume I've ever owned."</p>
+          <div class="review-author">
+            <div class="review-avatar">NP</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Nadia Pervez</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 12 -->
+        <div class="review-card" data-category="attar" data-aos="fade-up" data-aos-duration="600">
+          <div class="review-card-header">
+            <div class="review-google-badge"><i class="fab fa-google"></i> Google Review</div>
+            <div class="review-category-tag">Oud</div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">"Great prices for original products. I was skeptical at first but the quality speaks for itself. Now a loyal customer!"</p>
+          <div class="review-author">
+            <div class="review-avatar">IS</div>
+            <div class="review-author-info">
+              <span class="review-author-name">Imran Sheikh</span>
+              <span class="review-verified"><i class="fas fa-check-circle"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Review Stats Section -->
+  <section class="review-stats-section" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Numbers</span>
+        <h2 class="section-title">Review Statistics</h2>
+        <div class="section-divider"><span></span><i class="fas fa-gem"></i><span></span></div>
+      </div>
+      <div class="review-stats-grid">
+        <div class="review-stat-card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+          <div class="stat-icon"><i class="fas fa-comments"></i></div>
+          <div class="stat-number">72</div>
+          <div class="stat-label">Total Reviews</div>
+        </div>
+        <div class="review-stat-card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
+          <div class="stat-icon"><i class="fas fa-star"></i></div>
+          <div class="stat-number">68</div>
+          <div class="stat-label">5 Star Reviews</div>
+        </div>
+        <div class="review-stat-card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
+          <div class="stat-icon"><i class="fas fa-star-half-alt"></i></div>
+          <div class="stat-number">4</div>
+          <div class="stat-label">4 Star Reviews</div>
+        </div>
+        <div class="review-stat-card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+          <div class="stat-icon"><i class="fas fa-thumbs-up"></i></div>
+          <div class="stat-number">98<span class="stat-unit">%</span></div>
+          <div class="stat-label">Would Recommend</div>
+        </div>
+        <div class="review-stat-card" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
+          <div class="stat-icon"><i class="fas fa-redo"></i></div>
+          <div class="stat-number">85<span class="stat-unit">%</span></div>
+          <div class="stat-label">Repeat Customers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Write a Review Section -->
+  <section class="write-review-section" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Your Voice Matters</span>
+        <h2 class="section-title">Write a Review</h2>
+        <div class="section-divider"><span></span><i class="fas fa-gem"></i><span></span></div>
+        <p class="section-desc">Share your experience with Aturat Al Dubai and help other customers discover luxury fragrances</p>
+      </div>
+      <div class="write-review-form-wrapper">
+        <form class="write-review-form" id="reviewForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reviewerName">Your Name <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="reviewerName" name="name" placeholder="Enter your full name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reviewerEmail">Email Address <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="reviewerEmail" name="email" placeholder="Enter your email address" required>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Rating <span class="required">*</span></label>
+              <div class="rating-selector" id="ratingSelector">
+                <i class="fas fa-star" data-rating="1"></i>
+                <i class="fas fa-star" data-rating="2"></i>
+                <i class="fas fa-star" data-rating="3"></i>
+                <i class="fas fa-star" data-rating="4"></i>
+                <i class="fas fa-star" data-rating="5"></i>
+                <span class="rating-text" id="ratingText">Select rating</span>
+              </div>
+              <input type="hidden" id="ratingValue" name="rating" value="5">
+            </div>
+            <div class="form-group">
+              <label for="reviewCategory">Category <span class="required">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-tag"></i>
+                <select id="reviewCategory" name="category" required>
+                  <option value="" disabled>Select a category</option>
+                  <option value="men">Men's Perfume</option>
+                  <option value="women">Women's Perfume</option>
+                  <option value="attar">Attar</option>
+                  <option value="oud">Oud</option>
+                  <option value="gift-set">Gift Set</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group full-width">
+            <label for="reviewText">Your Review <span class="required">*</span></label>
+            <div class="input-wrapper textarea-wrapper">
+              <i class="fas fa-pen-fancy"></i>
+              <textarea id="reviewText" name="review" rows="5" placeholder="Tell us about your experience with our products and service..." required></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-gold btn-lg">
+              <i class="fas fa-paper-plane"></i> Submit Review
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Share Your Experience CTA -->
+  <section class="cta-section" data-aos="fade-up" data-aos-duration="800">
+    <div class="cta-bg-pattern"></div>
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-icon"><i class="fas fa-star"></i></div>
+        <h2 class="cta-title">Share Your Experience</h2>
+        <p class="cta-text">Your feedback helps us serve you better and helps others discover the art of luxury perfumery. Every review makes a difference!</p>
+        <div class="cta-buttons">
+          <a href="reviews.html#reviewForm" class="btn btn-gold btn-lg"><i class="fas fa-pen"></i> Write a Review</a>
+          <a href="https://www.facebook.com/aturataldubai/" target="_blank" class="btn btn-outline-gold btn-lg"><i class="fab fa-google"></i> Rate on Google</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Info -->
+          <div class="footer-col footer-brand">
+            <a href="index.html" class="footer-logo">
+              <span class="logo-icon">&#x2726;</span>
+              <div class="logo-text">
+                <span class="logo-main">Aturat Al Dubai</span>
+                <span class="logo-sub">Premium Luxury Perfumes</span>
+              </div>
+            </a>
+            <p class="footer-desc">Discover the finest collection of luxury perfumes, authentic Arabic attars, and pure oud in the heart of Lahore. Crafting beautiful scents since day one.</p>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/aturataldubai/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Categories -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Categories</h4>
+            <ul class="footer-links">
+              <li><a href="shop.html">Men's Perfumes</a></li>
+              <li><a href="shop.html">Women's Perfumes</a></li>
+              <li><a href="shop.html">Arabic Attars</a></li>
+              <li><a href="shop.html">Pure Oud</a></li>
+              <li><a href="shop.html">Gift Sets</a></li>
+              <li><a href="shop.html">Bakhoor</a></li>
+            </ul>
+          </div>
+
+          <!-- Address -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Visit Us</h4>
+            <div class="footer-contact">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Shop No. 2, Main Al Madina Road, 11-12 Chowk, Abu Bakar Centre, Block 9 Sector B-1, Lahore 54770, Pakistan</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+923001234567">+92 300 123 4567</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 11AM - 10PM<br>Sunday: 12PM - 8PM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Newsletter</h4>
+            <p class="footer-newsletter-text">Subscribe for exclusive offers, new arrivals, and fragrance tips.</p>
+            <form class="footer-newsletter-form" onsubmit="return false;">
+              <div class="newsletter-input-group">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Aturat Al Dubai. All Rights Reserved. | Premium Luxury Perfumes in Lahore</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar-header">
+      <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+      <button class="cart-sidebar-close" id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-sidebar-body" id="cartItems">
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your cart is empty</p>
+        <a href="shop.html" class="btn btn-gold">Start Shopping</a>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="cart-total-price" id="cartTotal">PKR 0</span>
+      </div>
+      <button class="btn btn-gold btn-block">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Wishlist Sidebar -->
+  <div class="wishlist-overlay" id="wishlistOverlay"></div>
+  <div class="wishlist-sidebar" id="wishlistSidebar">
+    <div class="wishlist-sidebar-header">
+      <h3><i class="far fa-heart"></i> Wishlist</h3>
+      <button class="wishlist-sidebar-close" id="closeWishlist"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wishlist-sidebar-body" id="wishlistItems">
+      <div class="wishlist-empty">
+        <i class="far fa-heart"></i>
+        <p>Your wishlist is empty</p>
+        <a href="shop.html" class="btn btn-gold">Browse Products</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+    <div class="toast-body">
+      <span class="toast-title">Success</span>
+      <span class="toast-message" id="toastMessage">Item added</span>
+    </div>
+    <button class="toast-close" id="toastClose"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/923001234567" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Reviews Filter Tabs
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const reviewCards = document.querySelectorAll('.review-card');
+
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          filterTabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.getAttribute('data-filter');
+
+          reviewCards.forEach(card => {
+            if (filter === 'all' || filter === '5star') {
+              card.style.display = '';
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50);
+            } else {
+              const cat = card.getAttribute('data-category');
+              if (cat === filter) {
+                card.style.display = '';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                  card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                  card.style.opacity = '1';
+                  card.style.transform = 'translateY(0)';
+                }, 50);
+              } else {
+                card.style.transition = 'opacity 0.3s ease';
+                card.style.opacity = '0';
+                setTimeout(() => { card.style.display = 'none'; }, 300);
+              }
+            }
+          });
+        });
+      });
+
+      // Rating Selector
+      const ratingStars = document.querySelectorAll('#ratingSelector .fa-star');
+      const ratingText = document.getElementById('ratingText');
+      const ratingValue = document.getElementById('ratingValue');
+      const ratingLabels = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
+
+      ratingStars.forEach(star => {
+        star.addEventListener('click', function() {
+          const rating = parseInt(this.getAttribute('data-rating'));
+          ratingValue.value = rating;
+          ratingStars.forEach(s => {
+            const r = parseInt(s.getAttribute('data-rating'));
+            s.classList.toggle('active', r <= rating);
+          });
+          ratingText.textContent = ratingLabels[rating];
+        });
+
+        star.addEventListener('mouseenter', function() {
+          const rating = parseInt(this.getAttribute('data-rating'));
+          ratingStars.forEach(s => {
+            const r = parseInt(s.getAttribute('data-rating'));
+            s.classList.toggle('hover', r <= rating);
+          });
+        });
+      });
+
+      document.getElementById('ratingSelector').addEventListener('mouseleave', function() {
+        ratingStars.forEach(s => s.classList.remove('hover'));
+      });
+
+      // Initialize 5 star default
+      ratingStars.forEach(s => {
+        const r = parseInt(s.getAttribute('data-rating'));
+        s.classList.toggle('active', r <= 5);
+      });
+      ratingText.textContent = 'Excellent';
+
+      // Review Form Submit
+      document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('reviewerName').value;
+        const rating = ratingValue.value;
+
+        if (name && rating) {
+          showToast('Thank you ' + name + '! Your review has been submitted.');
+          this.reset();
+          ratingStars.forEach(s => s.classList.remove('active'));
+          ratingText.textContent = 'Select rating';
+          ratingValue.value = '';
+        }
+      });
+    });
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMessage');
+      toastMsg.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 3000);
+    }
+  </script>
+</body>
+</html>
