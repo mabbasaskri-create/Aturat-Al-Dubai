@@ -2648,6 +2648,10 @@ input,textarea,select{font-family:inherit;outline:none}
 
 /* 768px Extension */
 @media (max-width: 768px) {
+    .scroll-indicator {
+        display: none;
+    }
+
     .product-main-image {
         height: 280px;
     }
